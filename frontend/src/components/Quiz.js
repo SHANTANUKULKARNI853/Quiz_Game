@@ -13,7 +13,7 @@ const Quiz = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("https://cors-anywhere.herokuapp.com/https://opentdb.com/api.php?amount=10&type=multiple")
+    axios.get("https://thingproxy.freeboard.io/fetch/https://opentdb.com/api.php?amount=10&type=multiple")
 
       .then((response) => {
         const decodedQuestions = response.data.results.map((q) => ({
