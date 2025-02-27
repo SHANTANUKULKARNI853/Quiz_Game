@@ -14,7 +14,7 @@ const Quiz = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/questions")
+      .get("https://opentdb.com/api.php?amount=10&type=multiple")
       .then((response) => {
         const decodedQuestions = response.data.results.map((q) => ({
           ...q,
@@ -26,6 +26,7 @@ const Quiz = () => {
       })
       .catch((error) => console.error("Error fetching questions:", error));
   }, []);
+
 
   const handleAnswer = (selectedAnswer) => {
     const correctAnswer = questions[currentQuestion].correct_answer;
