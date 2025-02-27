@@ -13,7 +13,7 @@ const Quiz = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("https://quiz-game-c7ja.onrender.com")
+    axios.get("https://quiz-game-c7ja.onrender.com/api/questions")
 
       .then((response) => {
         const decodedQuestions = response.data.results.map((q) => ({
